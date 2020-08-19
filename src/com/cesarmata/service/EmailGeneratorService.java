@@ -11,13 +11,15 @@ import java.text.SimpleDateFormat;
  */
 public class EmailGeneratorService {
 	
-	public void createTemplate(String cliente, String encabezado, String seccion, String fuente, String autor, String contenido, String urlFuente, String linkImagen) {
+	public void createTemplate(String cliente, String encabezado, String seccion, String fuente, String autor, String contenido, String urlFuente, String linkImagen, String tiraje, String adEquivalence) {
 		
 		String txtHeaderUno = cliente;
 		String txtTitleOne = encabezado;
 		String txtSection = seccion;
 		String txtResource = fuente;
 		String txtBy = autor;
+		String txtTiraje = tiraje;
+		String txtAdEquivalence = adEquivalence;
 		String txtContent = contenido;
 		String txtUrl = urlFuente;
 		String txtLinkImagen = linkImagen;
@@ -38,7 +40,8 @@ public class EmailGeneratorService {
     		htmlStringBuilder.append("<font color=\"#ff0000\"><strong><font size=\"2\" face=\"Arial, Helvetica, sans-serif\">Destacamos del: "+date.format(new Date())+"</font></strong><font size=\"2\" face=\"Arial, Helvetica, sans-serif\"></font></font>");
     		htmlStringBuilder.append("<font size=\"2\" face=\"Arial, Helvetica, sans-serif\"></font></p>");
     		htmlStringBuilder.append("<p><strong><font size=\"3\" face=\"Arial\">"+txtHeaderUno.toUpperCase()+"</font></strong></p>");
-    		htmlStringBuilder.append("<p><font size=\"3\" face=\"Arial\">"+txtTitleOne+" // "+txtResource+" // "+txtSection+" // Por: "+txtBy+" // Fecha: "+date.format(new Date())+"</font>");
+// v3.0		htmlStringBuilder.append("<p><font size=\"3\" face=\"Arial\">"+txtTitleOne+" // "+txtResource+" // "+"<strong><font size=\"2\" face=\"Arial\">Sección: </font></strong>"+txtSection+" // Por: "+txtBy+" // "+"<strong><font size=\"2\" face=\"Arial\">Impactos diarios: </font></strong>"+txtTiraje+" // "+"<strong><font size=\"2\" face=\"Arial\">Ad. Equivalence: </font></strong>"+txtAdEquivalence+" // Fecha: "+date.format(new Date())+"</font>");
+/* v4.0 */  htmlStringBuilder.append("<p><font size=\"3\" face=\"Arial\">"+txtTitleOne+" // "+txtResource+" // "+"Sección: "+txtSection+" // Por: "+txtBy+" // "+"Impactos diarios: "+txtTiraje+" // "+"Ad. Equivalence: "+txtAdEquivalence+" // Fecha: "+date.format(new Date())+"</font>");
     		htmlStringBuilder.append("<br>");
     		htmlStringBuilder.append("<font size=\"2\" face=\"Arial, Helvetica, sans-serif\">"+txtContent+"</font>");
     		htmlStringBuilder.append("<br>");

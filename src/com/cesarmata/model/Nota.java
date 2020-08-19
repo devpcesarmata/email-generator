@@ -16,12 +16,20 @@ public class Nota {
 	private String contenido;
 	private String urlFuente;
 	private String linkImagen;
+	private String nota;
+	
+	private String tiraje;
+	private String adEquivalence;
 	
 	public Nota() {
 		
 	}
 	
-	public Nota (String cliente, String encabezado, String fuente, String seccion, String autor, String contenido, String urlFuente, String linkImagen) {
+	public Nota(String nota) {
+		this.nota = nota;
+	}
+	
+	public Nota (String cliente, String encabezado, String fuente, String seccion, String autor, String contenido, String urlFuente, String linkImagen, String tiraje, String adEquivalence) {
 		this.cliente = cliente;
 		this.encabezado = encabezado;
 		this.fuente = fuente;
@@ -30,6 +38,8 @@ public class Nota {
 		this.contenido = contenido;
 		this.urlFuente = urlFuente;
 		this.linkImagen = linkImagen;
+		this.tiraje = tiraje;
+		this.adEquivalence = adEquivalence;
 	}
 
 	public String getCliente() {
@@ -94,6 +104,37 @@ public class Nota {
 
 	public void setLinkImagen(String linkImagen) {
 		this.linkImagen = linkImagen;
+	}
+	
+	public String getNota() {
+		return nota;
+	}
+
+	public void setNota(String nota) {
+		this.nota = nota;
+	}
+
+	public String getTiraje() {
+		return tiraje;
+	}
+
+	public void setTiraje(String tiraje) {
+		this.tiraje = tiraje;
+	}
+
+	public String getAdEquivalence() {
+		return adEquivalence;
+	}
+
+	public void setAdEquivalence(String adEquivalence) {
+		this.adEquivalence = adEquivalence;
+	}
+
+	@Override
+	public String toString() {
+		return "Nota [cliente=" + cliente + ", encabezado=" + encabezado + ", fuente=" + fuente + ", seccion=" + seccion
+				+ ", autor=" + autor + ", contenido=" + contenido + ", urlFuente=" + urlFuente + ", linkImagen="
+				+ linkImagen + ", nota=" + nota + ", tiraje=" + tiraje + ", adEquivalence=" + adEquivalence + "]";
 	}
 	
 }
