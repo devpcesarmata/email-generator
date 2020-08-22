@@ -41,7 +41,7 @@ public class EmailGeneratorService {
     		htmlStringBuilder.append("<font size=\"2\" face=\"Arial, Helvetica, sans-serif\"></font></p>");
     		htmlStringBuilder.append("<p><strong><font size=\"3\" face=\"Arial\">"+txtHeaderUno.toUpperCase()+"</font></strong></p>");
 // v3.0		htmlStringBuilder.append("<p><font size=\"3\" face=\"Arial\">"+txtTitleOne+" // "+txtResource+" // "+"<strong><font size=\"2\" face=\"Arial\">Sección: </font></strong>"+txtSection+" // Por: "+txtBy+" // "+"<strong><font size=\"2\" face=\"Arial\">Impactos diarios: </font></strong>"+txtTiraje+" // "+"<strong><font size=\"2\" face=\"Arial\">Ad. Equivalence: </font></strong>"+txtAdEquivalence+" // Fecha: "+date.format(new Date())+"</font>");
-/* v4.0 */  htmlStringBuilder.append("<p><font size=\"3\" face=\"Arial\">"+txtTitleOne+" // "+txtResource+" // "+"Sección: "+txtSection+" // Por: "+txtBy+" // "+"Impactos diarios: "+txtTiraje+" // "+"Ad. Equivalence: "+txtAdEquivalence+" // Fecha: "+date.format(new Date())+"</font>");
+/* v4.0 */  htmlStringBuilder.append("<p><font size=\"3\" face=\"Arial\">"+txtTitleOne+" // "+txtResource+" // "+"Sección: "+txtSection+" // Por: "+txtBy+" // "+"Impactos diarios: "+txtTiraje+" // "+"Ad value: "+txtAdEquivalence+" // Fecha: "+date.format(new Date())+"</font>");
     		htmlStringBuilder.append("<br>");
     		htmlStringBuilder.append("<font size=\"2\" face=\"Arial, Helvetica, sans-serif\">"+txtContent+"</font>");
     		htmlStringBuilder.append("<br>");
@@ -54,7 +54,7 @@ public class EmailGeneratorService {
     		htmlStringBuilder.append("</p>");
     		htmlStringBuilder.append("<p>");
     		htmlStringBuilder.append("<hr>");
-    		htmlStringBuilder.append("<div align=\"center\"><font size=\"1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Servicio de Noticias de portales de Consultores en Monitoreo de Medios.<br>Las Ligas pueden cambiar sin previo aviso por los portales de noticias</font></div>");
+    		htmlStringBuilder.append("<div align=\"center\"><font size=\"1\" face=\"Verdana, Arial, Helvetica, sans-serif\">Servicio de noticias de Consultores en Monitoreo de Medios.<br>Las Ligas pueden cambiar sin previo aviso por los portales de noticias.</font></div>");
     		htmlStringBuilder.append("</div>");
     		htmlStringBuilder.append("</body>");
     		htmlStringBuilder.append("</html>");
